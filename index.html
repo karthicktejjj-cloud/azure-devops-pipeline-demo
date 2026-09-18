@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>ResultHub | Student Performance</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+    </div>
+
+    <!-- Main Application -->
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">R</div>
+
+                <div>
+                    <h2>ResultHub</h2>
+                    <span>Student Portal</span>
+                </div>
+            </div>
+
+            <nav class="navigation">
+
+                <a href="#dashboard" class="nav-item active">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a href="#result" class="nav-item">
+                    <span>◈</span>
+                    Result
+                </a>
+
+                <a href="#performance" class="nav-item">
+                    <span>◉</span>
+                    Performance
+                </a>
+
+                <a href="#pipeline" class="nav-item">
+                    <span>⚡</span>
+                    CI/CD Pipeline
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="system-status">
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <strong>System Online</strong>
+                        <small>All services operational</small>
+                    </div>
+                </div>
+
+                <div class="version">
+                    v2.0 • DevOps Demo
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content" id="dashboard">
+
+            <!-- Top Header -->
+            <header class="topbar">
+
+                <div>
+                    <p class="eyebrow">STUDENT PERFORMANCE</p>
+
+                    <h1>
+                        Welcome to
+                        <span>ResultHub</span>
+                    </h1>
+
+                    <p class="subtitle">
+                        Analyze your academic performance with real-time insights.
+                    </p>
+                </div>
+
+                <div class="live-badge">
+                    <span></span>
+                    LIVE SYSTEM
+                </div>
+
+            </header>
+
+
+            <!-- Student Input Section -->
+            <section class="hero-grid">
+
+                <!-- 3D Student Card -->
+                <div class="student-card glass-card">
+
+                    <div class="card-glow"></div>
+
+                    <div class="student-avatar" id="avatar">
+                        ?
+                    </div>
+
+                    <div class="student-info">
+
+                        <span class="label">
+                            STUDENT PROFILE
+                        </span>
+
+                        <h2 id="resultName">
+                            Your Name
+                        </h2>
+
+                        <p>
+                            Register No:
+                            <strong id="resultRegister">
+                                ---
+                            </strong>
+                        </p>
+
+                    </div>
+
+                    <div class="student-decoration">
+                        <div class="ring ring-one"></div>
+                        <div class="ring ring-two"></div>
+                        <div class="ring ring-three"></div>
+                    </div>
+
+                </div>
+
+
+                <!-- Result Summary -->
+                <div class="summary-card glass-card">
+
+                    <div class="section-heading">
+
+                        <div>
+                            <span class="label">
+                                OVERALL RESULT
+                            </span>
+
+                            <h2>Performance Summary</h2>
+                        </div>
+
+                        <div
+                            class="result-status"
+                            id="status"
+                        >
+                            WAITING
+                        </div>
+
+                    </div>
+
+                    <div class="summary-grid">
+
+                        <div class="metric">
+                            <span>Total Marks</span>
+                            <strong id="total">0/400</strong>
+                        </div>
+
+                        <div class="metric">
+                            <span>Percentage</span>
+                            <strong id="percentage">0%</strong>
+                        </div>
+
+                        <div class="metric">
+                            <span>Grade</span>
+                            <strong id="grade">-</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Input Section -->
+            <section class="panel glass-card" id="result">
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="label">
+                            RESULT CALCULATOR
+                        </span>
+
+                        <h2>Enter Student Marks</h2>
+                    </div>
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+
+                        <label for="studentName">
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            placeholder="Enter student name"
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label for="registerNumber">
+                            Register Number
+                        </label>
+
+                        <input
+                            type="text"
+                            id="registerNumber"
+                            placeholder="Enter register number"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="subjects-grid">
+
+                    <!-- DevOps -->
+                    <div class="subject-input">
+
+                        <div class="subject-top">
+
+                            <div class="subject-icon">
+                                D
+                            </div>
+
+                            <div>
+                                <h3>DevOps</h3>
+                                <span>Subject 01</span>
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            id="devops"
+                            min="0"
+                            max="100"
+                            placeholder="00"
+                        >
+
+                        <span class="marks-label">
+                            / 100
+                        </span>
+
+                    </div>
+
+
+                    <!-- Cloud -->
+                    <div class="subject-input">
+
+                        <div class="subject-top">
+
+                            <div class="subject-icon">
+                                C
+                            </div>
+
+                            <div>
+                                <h3>Cloud Computing</h3>
+                                <span>Subject 02</span>
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            id="cloud"
+                            min="0"
+                            max="100"
+                            placeholder="00"
+                        >
+
+                        <span class="marks-label">
+                            / 100
+                        </span>
+
+                    </div>
+
+
+                    <!-- Database -->
+                    <div class="subject-input">
+
+                        <div class="subject-top">
+
+                            <div class="subject-icon">
+                                DB
+                            </div>
+
+                            <div>
+                                <h3>Database</h3>
+                                <span>Subject 03</span>
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            id="database"
+                            min="0"
+                            max="100"
+                            placeholder="00"
+                        >
+
+                        <span class="marks-label">
+                            / 100
+                        </span>
+
+                    </div>
+
+
+                    <!-- Networks -->
+                    <div class="subject-input">
+
+                        <div class="subject-top">
+
+                            <div class="subject-icon">
+                                N
+                            </div>
+
+                            <div>
+                                <h3>Computer Networks</h3>
+                                <span>Subject 04</span>
+                            </div>
+
+                        </div>
+
+                        <input
+                            type="number"
+                            id="networks"
+                            min="0"
+                            max="100"
+                            placeholder="00"
+                        >
+
+                        <span class="marks-label">
+                            / 100
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="calculate-btn"
+                    onclick="calculateResult()"
+                >
+
+                    <span>
+                        Calculate Result
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+            </section>
+
+
+            <!-- Performance Section -->
+            <section
+                class="panel glass-card"
+                id="performance"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+                        <span class="label">
+                            PERFORMANCE ANALYTICS
+                        </span>
+
+                        <h2>Subject Performance</h2>
+                    </div>
+
+                    <div class="section-number">
+                        02
+                    </div>
+
+                </div>
+
+
+                <div class="performance-grid">
+
+                    <!-- DevOps -->
+                    <div class="performance-card">
+
+                        <div class="performance-header">
+
+                            <div class="performance-title">
+
+                                <div class="mini-icon">
+                                    D
+                                </div>
+
+                                <div>
+                                    <strong>DevOps</strong>
+                                    <span>Subject 01</span>
+                                </div>
+
+                            </div>
+
+                            <strong id="devopsScore">
+                                0
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-bar"
+                                id="devopsBar"
+                                style="width: 0%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Cloud -->
+                    <div class="performance-card">
+
+                        <div class="performance-header">
+
+                            <div class="performance-title">
+
+                                <div class="mini-icon">
+                                    C
+                                </div>
+
+                                <div>
+                                    <strong>Cloud Computing</strong>
+                                    <span>Subject 02</span>
+                                </div>
+
+                            </div>
+
+                            <strong id="cloudScore">
+                                0
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-bar"
+                                id="cloudBar"
+                                style="width: 0%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Database -->
+                    <div class="performance-card">
+
+                        <div class="performance-header">
+
+                            <div class="performance-title">
+
+                                <div class="mini-icon">
+                                    DB
+                                </div>
+
+                                <div>
+                                    <strong>Database</strong>
+                                    <span>Subject 03</span>
+                                </div>
+
+                            </div>
+
+                            <strong id="databaseScore">
+                                0
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-bar"
+                                id="databaseBar"
+                                style="width: 0%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Networks -->
+                    <div class="performance-card">
+
+                        <div class="performance-header">
+
+                            <div class="performance-title">
+
+                                <div class="mini-icon">
+                                    N
+                                </div>
+
+                                <div>
+                                    <strong>Computer Networks</strong>
+                                    <span>Subject 04</span>
+                                </div>
+
+                            </div>
+
+                            <strong id="networksScore">
+                                0
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-bar"
+                                id="networksBar"
+                                style="width: 0%"
+                            ></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-message" id="message">
+                    Enter marks above to generate your performance report.
+                </div>
+
+            </section>
+
+
+            <!-- CI/CD Pipeline -->
+            <section
+                class="pipeline-panel"
+                id="pipeline"
+            >
+
+                <div class="pipeline-header">
+
+                    <div>
+                        <span class="label">
+                            DEVOPS AUTOMATION
+                        </span>
+
+                        <h2>CI/CD Pipeline</h2>
+
+                        <p>
+                            Every code change is automatically validated,
+                            built and deployed.
+                        </p>
+                    </div>
+
+                    <div class="pipeline-live">
+                        ● PIPELINE ACTIVE
+                    </div>
+
+                </div>
+
+
+                <div class="pipeline">
+
+                    <!-- Step 1 -->
+                    <div class="pipeline-step">
+
+                        <div class="pipeline-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Code Push</strong>
+                            <span>GitHub Repository</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pipeline-line"></div>
+
+
+                    <!-- Step 2 -->
+                    <div class="pipeline-step">
+
+                        <div class="pipeline-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Build</strong>
+                            <span>GitHub Actions</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pipeline-line"></div>
+
+
+                    <!-- Step 3 -->
+                    <div class="pipeline-step">
+
+                        <div class="pipeline-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Test</strong>
+                            <span>Automated Validation</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="pipeline-line"></div>
+
+
+                    <!-- Step 4 -->
+                    <div class="pipeline-step">
+
+                        <div class="pipeline-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>Deploy</strong>
+                            <span>GitHub Pages</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer>
+
+                <span>
+                    ResultHub • DevOps CI/CD Demonstration
+                </span>
+
+                <span>
+                    Built with HTML • CSS • JavaScript • GitHub Actions
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
